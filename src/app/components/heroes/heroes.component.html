@@ -1,0 +1,20 @@
+<br>
+<h1>Peliculas&nbsp;<small>Disney y Pixar</small></h1>
+<hr> 
+<div class="card-columns">
+  <div class="row">
+    <div class="card" *ngFor="let h_p65 of heroes;let i=index" style="width: 18rem;margin: 20px;">
+      <img src="{{h_p65.img}}" class="card-img-top" alt="Car Imagen..">
+      <div class="card-body">
+        <h5 class="card-title">{{h_p65.nombre}}</h5>
+        <p class="card-text">{{h_p65.bio}}</p>
+        <p class="card-text"><small>{{h_p65.aparicion}}</small></p>
+        <a [routerLink]="['/heroe',i]" class="btn btn-primary">Go somewhere</a> 
+        <br> 
+        <button type="button" (click)="verHeroe(i)" class="btn btn-outline-success btn-block">
+          Ver mas...
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

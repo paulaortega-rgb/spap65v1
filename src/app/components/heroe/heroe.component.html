@@ -1,0 +1,16 @@
+<h1 class="animated faceIn">{{heroe.nombre | uppercase}}<br><small>Aparicion:{{heroe.aparicion | date:'longDate'}}</small></h1>
+<hr> 
+<div class="row"> 
+    <div class="col-md-4">
+        <img [src]="heroe.img" class="img-fluid" [alt]="heroe.nombre">
+        <br><br>
+        <a [routerLink]="['/heroes']" class="btn btn-outline-danger btn-block" style="width:100%;">Regresar</a>
+    </div>
+    <div class="col-md-8">
+        <h3>{{heroe.nombre}}</h3>
+        <hr> 
+        <p>{{heroe.bio}}</p>
+        <img *ngIf="heroe.casa=='Disney'" class="img-logo" src="assets/img/logo-1.png" alt="DC">
+        <img *ngIf="heroe.casa=='Pixar'" class="img-logo" src="assets/img/logo2.png" alt="Marvel">    
+    </div>
+</div>
